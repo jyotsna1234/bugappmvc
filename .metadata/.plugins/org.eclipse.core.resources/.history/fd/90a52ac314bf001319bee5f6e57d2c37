@@ -1,0 +1,11 @@
+<?=$query['id']?>
+<?php 
+ini_set('display_error',1);
+echo $result['id'];
+echo $result['data'];
+ /*foreach($query as $row)
+{
+	print $row->id;
+}*/
+ 
+?>

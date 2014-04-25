@@ -1,0 +1,22 @@
+<?php
+	
+include("db.php");
+$databasee = new database('localhost', 'root', 'vsspl');
+$databasee->connectdb();
+$databasee->select('bug_tracker');
+ $q=$_GET['q'];
+ 
+  
+     $a = mysql_query($query); 
+if (!$a)
+  {
+  die('Error: ' .mysql_error());
+  }
+else
+	{
+		 while($row = mysql_fetch_assoc($a))
+    {
+    	echo $row['comment_desp'];
+	}
+	}
+ ?>

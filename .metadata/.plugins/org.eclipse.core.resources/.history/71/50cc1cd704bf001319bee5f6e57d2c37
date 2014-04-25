@@ -1,0 +1,10 @@
+<?php
+class Samplemodel extends CI_Model {	
+	public function bugsdata()
+	{
+				$this->load->database();
+				$query=$this->db->getwhere('bugs',array('id'=>'1'));
+				return $query->row_array();
+	}
+}
+?>

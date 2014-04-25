@@ -1,0 +1,19 @@
+<?php
+	
+include("db.php");
+$databasee = new database('localhost', 'root', 'vsspl');
+$databasee->connectdb();
+$databasee->select('bug_tracker');
+ $q=$_GET['q'];
+ echo $query='SELECT comment_desp from comments'.$q.'")';
+  
+     $a = mysql_query($query); 
+if (!$a)
+  {
+  die('Error: ' .mysql_error());
+  }
+else
+	{
+		echo 1;
+	}
+ ?>

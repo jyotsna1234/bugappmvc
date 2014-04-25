@@ -1,0 +1,87 @@
+<?php
+	
+include("db.php");
+$databasee = new database('localhost', 'root', 'vsspl');
+$databasee->connectdb();
+$databasee->select('bug_tracker');
+
+
+$q = $_GET['q'];
+$s = $_GET['s'];
+
+switch($s)
+{
+ 
+case "project":
+	
+  
+    $result = mysql_query('SELECT * FROM bugs where project="'.$q.'"');
+
+    while($row = mysql_fetch_assoc($result))
+    {
+  
+    echo '<tr id=content><td id="cid">'.$row['ID'].'</td><td id="cflag">'.$row['flag'].'</td><td id="cdescription"><a href="#">'.$row['description'].'</a></td><td id="cproject">'.$row['project'].'</td><td id="ccategory">'.$row['category'].'</td><td id="creportedby">'.$row['reported_by'].'</td><td id="creportedon">'.$row['reported_on'].'</td><td id="cpriority">'.$row['priority'].'</td><td id="cassignedto">'.$row['assigned_to'].'</td><td id="cstatus">'.$row['status'].'<td id="clastupdatedby">'.$row['last_updated_by'].'</td><td id="clastupdatedon">'.$row['last_updated_on'].'</td></tr>';
+   
+    }	
+	
+break;
+
+case "reported_by":
+	$result = mysql_query('SELECT * FROM bugs where reported_by="'.$q.'"');
+
+    while($row = mysql_fetch_assoc($result))
+    {
+  
+    echo '<tr id=content><td id="cid">'.$row['ID'].'</td><td id="cflag">'.$row['flag'].'</td><td id="cdescription"><a href="#">'.$row['description'].'</a></td><td id="cproject">'.$row['project'].'</td><td id="ccategory">'.$row['category'].'</td><td id="creportedby">'.$row['reported_by'].'</td><td id="creportedon">'.$row['reported_on'].'</td><td id="cpriority">'.$row['priority'].'</td><td id="cassignedto">'.$row['assigned_to'].'</td><td id="cstatus">'.$row['status'].'<td id="clastupdatedby">'.$row['last_updated_by'].'</td><td id="clastupdatedon">'.$row['last_updated_on'].'</td></tr>';
+	
+   
+    }
+break;
+
+case "category":
+	$result = mysql_query('SELECT * FROM bugs where category="'.$q.'"');
+
+    while($row = mysql_fetch_assoc($result))
+    {
+  
+    echo '<tr id=content><td id="cid">'.$row['ID'].'</td><td id="cflag">'.$row['flag'].'</td><td id="cdescription"><a href="#">'.$row['description'].'</a></td><td id="cproject">'.$row['project'].'</td><td id="ccategory">'.$row['category'].'</td><td id="creportedby">'.$row['reported_by'].'</td><td id="creportedon">'.$row['reported_on'].'</td><td id="cpriority">'.$row['priority'].'</td><td id="cassignedto">'.$row['assigned_to'].'</td><td id="cstatus">'.$row['status'].'<td id="clastupdatedby">'.$row['last_updated_by'].'</td><td id="clastupdatedon">'.$row['last_updated_on'].'</td></tr>';
+   
+    }
+break;
+
+case "priority":
+	$result = mysql_query('SELECT * FROM bugs where priority="'.$q.'"');
+
+    while($row = mysql_fetch_assoc($result))
+    {
+  
+    echo '<tr id=content><td id="cid">'.$row['id'].'</td><td id="cflag">'.$row['flag'].'</td><td id="cdescription"><a href="#">'.$row['description'].'</a></td><td id="cproject">'.$row['project'].'</td><td id="ccategory">'.$row['category'].'</td><td id="creportedby">'.$row['reported_by'].'</td><td id="creportedon">'.$row['reported_on'].'</td><td id="cpriority">'.$row['priority'].'</td><td id="cassignedto">'.$row['assigned_to'].'</td><td id="cstatus">'.$row['status'].'<td id="clastupdatedby">'.$row['last_updated_by'].'</td><td id="clastupdatedon">'.$row['last_updated_on'].'</td></tr>';
+   
+    }
+break;
+
+case "assigned_to":
+	$result = mysql_query('SELECT * FROM bugs where assigned_to="'.$q.'"');
+
+    while($row = mysql_fetch_assoc($result))
+    {
+  
+    echo '<tr id=content><td id="cid">'.$row['ID'].'</td><td id="cflag">'.$row['flag'].'</td><td id="cdescription">'.$row['description'].'</td><td id="cproject">'.$row['project'].'</td><td id="ccategory">'.$row['category'].'</td><td id="creportedby">'.$row['reported_by'].'</td><td id="creportedon">'.$row['reported_on'].'</td><td id="cpriority">'.$row['priority'].'</td><td id="cassignedto">'.$row['assigned_to'].'</td><td id="cstatus">'.$row['status'].'<td id="clastupdatedby">'.$row['last_updated_by'].'</td><td id="clastupdatedon">'.$row['last_updated_on'].'</td></tr>';
+   
+    }
+break;
+
+case "status":
+	$result = mysql_query('SELECT * FROM bugs where status="'.$q.'"');
+
+    while($row = mysql_fetch_assoc($result))
+    {
+  
+    echo '<tr id=content><td id="cid">'.$row['ID'].'</td><td id="cflag">'.$row['flag'].'</td><td id="cdescription">'.$row['description'].'</td><td id="cproject">'.$row['project'].'</td><td id="ccategory">'.$row['category'].'</td><td id="creportedby">'.$row['reported_by'].'</td><td id="creportedon">'.$row['reported_on'].'</td><td id="cpriority">'.$row['priority'].'</td><td id="cassignedto">'.$row['assigned_to'].'</td><td id="cstatus">'.$row['status'].'<td id="clastupdatedby">'.$row['last_updated_by'].'</td><td id="clastupdatedon">'.$row['last_updated_on'].'</td></tr>';
+   
+    }
+break;
+  
+  }
+   
+?> 

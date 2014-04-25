@@ -1,0 +1,44 @@
+<?php
+$submit_url = "https://store-uzahrx.mybigcommerce.com/api/v2/products";
+$username=$_POST['username'];
+
+echo $username;
+$password=$_POST['password'];
+
+$arry1=array(
+    "name"=> "Plain T-Shirt1121",
+    "type"=> "physical",
+    "description"=> "This timeless fashion staple will never go out of style!",
+    "price"=> "29.99",
+    "categories"=> 18,
+    "availability"=> "available",
+    "weight"=> "0.5");
+
+
+$curl = curl_init();
+echo curl_setopt($curl, CURLOPT_URL,"https://store-uzahrx.mybigcommerce.com/api/v2");
+curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC ) ;
+curl_setopt($curl, CURLOPT_USERPWD, $username.':'.$password);
+//curl_setopt($curl, CURLOPT_SSLVERSION,3);
+//curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+//curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+curl_setopt($curl, CURLOPT_HEADER, true);
+curl_setopt($curl, CURLOPT_POST, FALSE);
+
+curl_setopt($curl, CURLOPT_POSTFIELDS, $arry1);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
+
+curl_setopt($curl, CURLOPT_URL, $submit_url);
+$result= curl_exec($curl) ;
+print_r($result);
+var_dump(); // show output
+
+if (curl_errno($ch)> 0){
+die('There was a cURL error: ' . curl_error($ch));
+} else {
+//Close the handler and release resources
+curl_close($ch);
+}
+?>

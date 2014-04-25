@@ -1,0 +1,18 @@
+<?php
+class Person
+{
+    function name($name)
+    {
+        return $name;
+    }
+}
+
+$foo = new Person();
+
+function doSomething(Person $lname)
+{
+    return $lname->name;
+}
+
+doSomething('smith');
+?>

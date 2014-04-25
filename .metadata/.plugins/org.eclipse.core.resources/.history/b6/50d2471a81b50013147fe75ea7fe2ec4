@@ -1,0 +1,13 @@
+<?php
+$ch = curl_init();                    // initiate curl
+
+curl_setopt($ch, CURLOPT_URL,$url);
+curl_setopt($ch, CURLOPT_POST, true);  // tell curl you want to post something
+curl_setopt($ch, CURLOPT_POSTFIELDS, "var1=value1&var2=value2&var_n=value_n"); // define what you want to post
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // return the output in string format
+$output = curl_exec ($ch); // execute
+
+curl_close ($ch); // close curl handle
+
+var_dump($output); // show output
+?>

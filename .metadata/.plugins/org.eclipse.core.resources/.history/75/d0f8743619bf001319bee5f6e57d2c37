@@ -1,0 +1,26 @@
+<?php
+/**
+ * 
+ */
+class overloading  {
+	var $data;
+	var $value;
+	public function method1()
+	{
+		echo "entered method with no parameters";
+	}
+	public function method1($data,$value)
+	{
+		$this->data=$data;
+		$this->value=$value;
+		echo "enterd in mathod with parameters".$data."".$value;
+	}
+}
+$overload1=new overloading();
+
+  $overload1->method1();
+  
+ $overload1->method1('name','dale'); 
+
+
+?>

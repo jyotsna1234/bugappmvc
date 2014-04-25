@@ -1,0 +1,15 @@
+<html>
+	<head>
+		          <script type="text/javascript" src="js1.js"></script>
+
+		<script type="javascript">
+			function fun()
+			{
+				return hello world;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="hello1" onclick=fun();/>
+	</body>
+</html>

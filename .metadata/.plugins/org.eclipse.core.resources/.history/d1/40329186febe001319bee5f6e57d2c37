@@ -1,0 +1,8 @@
+<?php
+class Samplemodel extends CI_Model {
+	public function bugsdata()
+	{
+				$this->load->database();
+	}
+}
+?>

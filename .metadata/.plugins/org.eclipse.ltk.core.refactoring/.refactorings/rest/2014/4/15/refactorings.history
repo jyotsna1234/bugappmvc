@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;rest/soap_ba.php&apos; to &apos;soap_ba_server.php&apos;" description="Rename resource &apos;soap_ba.php&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="soap_ba.php" name="soap_ba_server.php" stamp="1396845188189" updateReferences="true"/>
+</session>

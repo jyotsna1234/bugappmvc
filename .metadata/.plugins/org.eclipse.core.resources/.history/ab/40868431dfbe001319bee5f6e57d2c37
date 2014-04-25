@@ -1,0 +1,5 @@
+function myFunction()
+{
+	alert("hi");
+document.getElementById("demo").innerHTML="Hello World2";
+}

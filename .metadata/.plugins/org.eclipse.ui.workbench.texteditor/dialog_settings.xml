@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="wholeword"/>
+		<item value="last_updated_by" key="selection"/>
+		<list key="findhistory">
+			<item value="last_updated_by"/>
+			<item value="last_updated_on"/>
+			<item value="assigned_to"/>
+			<item value="ID"/>
+			<item value="description"/>
+		</list>
+	</section>
+</section>

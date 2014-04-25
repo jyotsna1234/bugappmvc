@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<script type="javascript">
+			function fun()
+			{
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="hello1" onclick= return fun();/>
+	</body>
+</html>

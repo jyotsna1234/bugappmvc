@@ -1,0 +1,23 @@
+<?php
+
+ include("db.php");
+$databasee = new database('localhost', 'root', 'vsspl');
+$databasee->connectdb();
+$databasee->select('bug_tracker');
+$q = $_GET['q'];
+
+ $query= 'UPDATE bugs SET description='.$_POST['descp'].',project='.$_POST['project'].',category='.$_POST['category'].',priority='.$_POST['priority'].',assgn='.$_POST['assigned_to'].',status='.$_POST['status'].
+ ',bugtype='.$_POST['bugtype'].
+ ' WHERE ID='.$q;
+  
+  $a = mysql_query($query); 
+if (!$a)
+  {
+  die('Error: ' .mysql_error());
+  }
+else
+	{
+		echo "kdjs";
+	}
+ 	
+?>

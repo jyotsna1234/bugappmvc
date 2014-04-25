@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;composer/vendor/composer/composer_sample.php&apos; to &apos;UserTest.php&apos;" description="Rename resource &apos;composer_sample.php&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="vendor/composer/composer_sample.php" name="UserTest.php" stamp="1396328032637" updateReferences="true"/>&#x0A;&#x0A;</session>

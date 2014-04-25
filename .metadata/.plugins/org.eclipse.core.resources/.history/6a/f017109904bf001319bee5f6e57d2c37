@@ -1,0 +1,7 @@
+<font color="<?=$color?>">
+<?=$name?></font>
+<?=$query[id]?>
+<?php 
+ini_set('display_error',1);
+ 
+?>

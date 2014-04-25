@@ -1,0 +1,14 @@
+
+<?
+class Sample extends CI_Controller
+{
+	 public function setValues()
+	{
+		$data['name']='dale';
+		$data['color']='red';
+	}
+	public function index()
+	{
+		$this->load->view('sampleview',$data);
+	}
+}

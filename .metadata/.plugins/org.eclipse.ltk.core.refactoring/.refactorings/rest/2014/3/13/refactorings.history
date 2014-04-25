@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;rest/sample3_rest_post.php&apos; to &apos;rest_post.php&apos;" description="Rename resource &apos;sample3_rest_post.php&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sample3_rest_post.php" name="rest_post.php" stamp="1395925559224" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;rest/sample4_rest.php&apos; to &apos;rest_get.php&apos;" description="Rename resource &apos;sample4_rest.php&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sample4_rest.php" name="rest_get.php" stamp="1395925579597" updateReferences="true"/>
+</session>

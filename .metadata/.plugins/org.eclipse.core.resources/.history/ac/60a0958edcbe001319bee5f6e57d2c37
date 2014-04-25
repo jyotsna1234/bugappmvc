@@ -1,0 +1,8 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<input type="button" name="hello1" onclick="fun()"/>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<?php
+$ch=curl_init();
+echo $ch."<br>";
+echo curl_setopt($ch, CURLOPT_URL,"https://store-uzahrx.mybigcommerce.com/api/v2")."<br>";
+// grab URL and pass it to the browser
+curl_exec($ch);
+
+// close cURL resource, and free up system resources
+curl_close($ch);
+
+
+?>

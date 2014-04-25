@@ -1,0 +1,6 @@
+<font color="<?=$color?>">
+<?=$name?></font>
+<?php 
+ini_set('display_error',1);
+ 
+?>

@@ -1,0 +1,28 @@
+<?php
+/**
+ * 
+ */
+class Overloading  {
+	var $data;
+	var $value;
+	public function method1()
+	{
+		echo 1;
+		return 1;
+		
+	}
+	public function method1($data,$value)
+	{
+		$this->data=$data;
+		$this->value=$value;
+		
+}
+}
+$overload1=new Overloading();
+	
+  echo $overload1->method1();
+  
+ $overload1->method1('name','dale'); 
+
+
+?>

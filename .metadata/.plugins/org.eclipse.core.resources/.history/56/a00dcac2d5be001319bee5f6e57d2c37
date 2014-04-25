@@ -1,0 +1,3 @@
+
+hello
+<font color="<?php $color?>"><?php $name; ?></font>

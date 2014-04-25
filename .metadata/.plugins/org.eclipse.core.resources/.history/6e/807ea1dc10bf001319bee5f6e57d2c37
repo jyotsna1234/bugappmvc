@@ -1,0 +1,11 @@
+<?php
+class Samplemodel extends CI_Model {	
+	public function bugsdata()
+	{
+				$this->load->database();
+				$query=$this->db->get_where('bugs', array('id' => 1231));
+				return $query->row_array();
+			//return $query->result();
+	}
+}
+?>

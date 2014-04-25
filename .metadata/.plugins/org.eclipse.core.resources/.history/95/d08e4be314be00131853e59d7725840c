@@ -1,0 +1,7 @@
+<?php
+require_once "/var/www/html/nusoap/lib/nusoap.php";
+ 
+
+ $ns="https://store-uzahrx.mybigcommerce.com/api/v2";
+$server=new soap_server();
+$header = new SOAPHeader($ns, 'jyotsna', '97210ce4456e7f67df1dc75278813b04a1263c49');

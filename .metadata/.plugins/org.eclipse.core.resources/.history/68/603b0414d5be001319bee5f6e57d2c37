@@ -1,0 +1,11 @@
+
+<?
+class Sample extends CI_Controller
+{
+	var $font;
+	var $color;
+	public function index()
+	{
+		$this->load->view('sampleview');
+	}
+}

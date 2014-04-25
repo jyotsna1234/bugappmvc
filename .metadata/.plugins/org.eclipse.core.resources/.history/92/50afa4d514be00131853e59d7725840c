@@ -1,0 +1,11 @@
+<?php
+    $c = curl_init();
+    curl_setopt($c, CURLOPT_URL, 'https://owa.sals.edu/EWS/Services.wsdl');
+    curl_setopt($c, CURLOPT_FAILONERROR, true); 
+    curl_setopt($c, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($c, CURLOPT_USERPWD, "user@example.com:password");
+    curl_setopt($c, CURLOPT_HTTPAUTH, CURLAUTH_NTLM);
+    $page = curl_exec($c);
+    curl_close($c);
+    echo '<pre>'.htmlspecialchars($page).'</pre>';

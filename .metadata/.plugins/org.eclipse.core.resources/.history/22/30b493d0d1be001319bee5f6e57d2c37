@@ -1,0 +1,39 @@
+<?php
+	ini_set('display_errors',1);
+
+// Declare the interface 'iTemplate'
+interface iTemplate
+{
+    public function setVariable($name, $var);
+    public function getHtml($template);
+}
+
+// Implement the interface
+// This will work
+class Template implements iTemplate
+{
+    private $vars = array();
+ 	 
+    public function setVariable($name, $var)
+    {
+        echo $this->vars[$name] = $var;
+		print_r($this->vars);
+    }
+  
+    public function getHtml($template)
+    {
+      foreach($this->vars as $name => $value) {
+        	
+           $template = str_replace('{' . $name . '}', $value, $template);
+        }
+ 
+        return $template;
+    }
+}
+$template=new Template();
+echo $template->setVariable('dale', 'dales');
+echo $template->getHtml('<html>');
+// Provides: 2
+$str = str_replace("ll", "", "good golly miss molly!");
+echo $str;
+?>

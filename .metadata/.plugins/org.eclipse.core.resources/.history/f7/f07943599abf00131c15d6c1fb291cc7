@@ -1,0 +1,27 @@
+<?php
+
+ ini_set('displayerror', 1);
+
+
+ 
+ 
+ 
+ 
+class Overloading  {
+	var $data;
+	var $value;
+	public function method1()
+	{
+	echo "enterd into method";
+		
+	}
+	
+}
+$overload1=new Overloading();
+	
+  $overload1->method1();
+  
+ $overload1->method1('name','dale'); 
+
+
+?>

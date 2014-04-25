@@ -1,0 +1,12 @@
+<?class Foo
+{
+    public static $my_static = 'foo';
+		public $nstatic=0;
+    public function staticValue() {
+        return self::$my_static;
+    }
+}
+$obj=new Foo();
+$obj->staticValue();
+print_r($obj);
+?>
